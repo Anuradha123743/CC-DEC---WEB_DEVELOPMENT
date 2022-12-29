@@ -1,0 +1,162 @@
+/* Colors:
+    #8afcff
+    #4a245d
+    #1b2021
+    #805E73
+    #6c464f
+*/
+html {
+    font-size: 16px;
+  }
+  
+  
+  /* Layout */
+  body {
+    background-color: #545b26;
+  }
+  
+  nav {
+      width: 100%;
+      text-align: center;
+      background: #323904;
+      position: fixed;
+    top: 0;
+  }
+  
+  nav a {
+      display: inline-block;
+      padding: 15px 20px;
+      text-decoration: none;
+      text-transform: uppercase;
+    font-family: "Helvetica", sans-serif;
+    font-size: 1.125rem;
+    color: #c29800;
+  }
+  
+  .selected{
+    background: #c29800;
+    color: #323904;
+  }
+  
+  .main {
+      display: flex;
+      padding: 3rem;
+      margin-top: 2rem;
+      height: 90vh;
+      justify-content: center;
+      align-items: middle;
+  }
+  
+  .clock-box,
+  #clock {
+      width: 100%;
+      margin-bottom: 0;
+  }
+  
+  /* Clock styles */
+  .circle {
+      fill: none;
+      stroke: #e4ba11;
+      stroke-width: 9;
+      stroke-miterlimit: 10;
+  }
+  
+  .mid-circle {
+      fill: #e4ba11;
+  }
+  .hour-marks {
+      fill: none;
+      stroke: #e4ba11;
+      stroke-width: 9;
+      stroke-miterlimit: 10;
+  }
+  
+  .hour-arm {
+      fill: none;
+      stroke: #e4ba11;
+      stroke-width: 17;
+      stroke-miterlimit: 10;
+  }
+  
+  .minute-arm {
+      fill: none;
+      stroke: #e4ba11;
+      stroke-width: 11;
+      stroke-miterlimit: 10;
+  }
+  
+  .second-arm {
+      fill: none;
+      stroke: #e4ba11;
+      stroke-width: 4;
+      stroke-miterlimit: 10;
+  }
+  
+  /* Transparent box ensuring arms center properly. */
+  .sizing-box {
+      fill: none;
+  }
+  
+  /* Make all arms rotate around the same center point. */
+  /* Optional: Use transition for animation. */
+  #hour,
+  #minute,
+  #second {
+      transform-origin: 300px 300px;
+      transition: transform 0.08s ease-in-out;
+  }
+  
+  h1 {
+    font-family: "Helvetica", sans-serif;
+    color: #e4ba11;
+    text-align: center;
+    font-size: 3rem;
+    padding: 1.5rem;
+  }
+  
+  .timer-box h1, .stopwatch-box h1 {
+    font-size: 5rem;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .timer-box p, .stopwatch-box h1, .stopwatch-box p {
+    font-family: "Helvetica", sans-serif;
+    color: #e4ba11;
+    font-size: 5rem;
+    text-align: center;
+  }
+  
+  input[type="text"] {
+    width: 2ch;
+      font-size: 5rem;
+    background: #545b26;
+    border: none;
+    color: #e4ba11;
+    text-align: center;
+    font-weight:bold;
+  }
+  
+  input[type="button"] {
+    font-weight: bold;
+    background: #c29800;
+    color: #323904;
+    border: 4px outset #545b26;
+    /* border: none; */
+    font-size: 3rem;
+    padding: 10px 30px;
+    /* border-radius: 50px; */
+  }
+  
+  input[type="button"]:active {
+    border: 2px inset #545b26;
+  }
+  
+  @media (max-width: 800px){
+      h1 {
+          font-size: 2rem
+      }
+  }
+  
